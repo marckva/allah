@@ -17,29 +17,31 @@ def Reg_form():
             logins.append(string2)
     print (logins)
     if (login+"\n") in logins:#Проверка на существующий логин
-        return  ('''<h2 align=center>This login already exists. Try again.  </h2>'''+"<br>"+'''
-        <style>
-            h2
-            {
-            font-size: 200%;
-            font-family: Verdana, Arial, Helvetica, sans-serif;
-            color: #808080;
-            }
-            .h4 {
-            border-radius: 12px;
-            background: wight;
-            border-color: #cccccc;
-            color: black;
-            font-size: 9pt;
-            height: 70px;
-            width: 200px;
-            position: relative;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,0);
-            }
-        </style>
-            <p><a href="/Reg"><input class=h4  type="submit" value="Back"></a></p>''')
+                return  ('''<h2 align=center>etot login yje ispolsovalsia. poprobyite eshe raz. </h2>'''+"<br>"+'''
+                <style>
+                body {
+                  background: #ffffff;
+                }
+                .gradient-button {
+                  text-decoration: none;
+                  display: inline-block;
+                  color: white;
+                  padding: 20px 80px;
+                  margin: 10px 20px;
+                  border-radius: 10px;
+                  font-family: 'Montserrat', sans-serif;
+                  text-transform: uppercase;
+                  letter-spacing: 2px;
+                  background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+                  background-size: 200% auto;
+                  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+                  transition: .5s;
+                }
+                .gradient-button:hover {
+                  background-position: right center;
+                }
+                </style>
+                ''')
     else:
         if (pas==pas1):#Проверка на пароли
             match = re.search (r'[a-zA-Z0-9+-]+[@][a-zA-Z0-9-.]+[^.].[a-zA-Z0-9-.]{2,3}$', mail)
@@ -61,77 +63,82 @@ def Reg_form():
                 f.writelines("Email: "+mail)
                 f.writelines("\n")
                 f.close()
-                return  ('''<h2 align=center>You have successfully registered </h2>'''+"<br>"+'''
+                return  ('''<h2 align=center>vi yspeshno zaregestrirovalis`  </h2>'''+"<br>"+'''
                 <style>
-
-                    h2
-                    {
-                    font-size: 200%;
-                    font-family: Verdana, Arial, Helvetica, sans-serif;
-                    color: #808080;
-                    }
-                    .h4 {
-                    border-radius: 12px;
-                    background: wight;
-                    border-color: #cccccc;
-                    color: black;
-                    font-size: 9pt;
-                    height: 70px;
-                    width: 200px;
-                    position: relative;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%,0);
-                    }
+                body {
+                  background: #ffffff;
+                }
+                .gradient-button {
+                  text-decoration: none;
+                  display: inline-block;
+                  color: white;
+                  padding: 20px 80px;
+                  margin: 10px 20px;
+                  border-radius: 10px;
+                  font-family: 'Montserrat', sans-serif;
+                  text-transform: uppercase;
+                  letter-spacing: 2px;
+                  background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+                  background-size: 200% auto;
+                  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+                  transition: .5s;
+                }
+                .gradient-button:hover {
+                  background-position: right center;
+                }
                 </style>
-                    <p><a href="/home"><input class=h4  type="submit" value="Back"></a></p>''')
+                <div class="holder">
+                    <p><a href="/Reg"class="gradient-button">Back</a></p>
+                </div>''')
             elif (match==None):
-                return  ('''<h2 align=center>Wrong mail. Try again.  </h2>'''+"<br>"+'''
+                return  ('''<h2 align=center>email ne podhodit. poprobyite eshe raz. </h2>'''+"<br>"+'''
                 <style>
-
-                    h2
-                    {
-                    font-size: 200%;
-                    font-family: Verdana, Arial, Helvetica, sans-serif;
-                    color: #808080;
-                    }
-                    .h4 {
-                    border-radius: 12px;
-                    background: wight;
-                    border-color: #cccccc;
-                    color: black;
-                    font-size: 9pt;
-                    height: 70px;
-                    width: 200px;
-                    position: relative;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%,0);
-                    }
+                body {
+                  background: #ffffff;
+                }
+                .gradient-button {
+                  text-decoration: none;
+                  display: inline-block;
+                  color: white;
+                  padding: 20px 80px;
+                  margin: 10px 20px;
+                  border-radius: 10px;
+                  font-family: 'Montserrat', sans-serif;
+                  text-transform: uppercase;
+                  letter-spacing: 2px;
+                  background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+                  background-size: 200% auto;
+                  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+                  transition: .5s;
+                }
+                .gradient-button:hover {
+                  background-position: right center;
+                }
                 </style>
-                    <p><a href="/Reg"><input class=h4  type="submit" value="Back"></a></p>''')
+                ''')
         elif (pas!=pas1):
-                return  ('''<h2 align=center>Password mismatch. Try again.  </h2>'''+"<br>"+'''
+                return  ('''<h2 align=center>parol ne sovpadaet. Try again.  </h2>'''+"<br>"+'''
                 <style>
-
-                    h2
-                    {
-                    font-size: 200%;
-                    font-family: Verdana, Arial, Helvetica, sans-serif;
-                    color: #808080;
-                    }
-                    .h4 {
-                    border-radius: 12px;
-                    background: wight;
-                    border-color: #cccccc;
-                    color: black;
-                    font-size: 9pt;
-                    height: 70px;
-                    width: 200px;
-                    position: relative;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%,0);
-                    }
+                body {
+                  background: #ffffff;
+                }
+                .gradient-button {
+                  text-decoration: none;
+                  display: inline-block;
+                  color: white;
+                  padding: 20px 80px;
+                  margin: 10px 20px;
+                  border-radius: 10px;
+                  font-family: 'Montserrat', sans-serif;
+                  text-transform: uppercase;
+                  letter-spacing: 2px;
+                  background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+                  background-size: 200% auto;
+                  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+                  transition: .5s;
+                }
+                .gradient-button:hover {
+                  background-position: right center;
+                }
                 </style>
-                    <p><a href="/Reg"><input class=h4  type="submit" value="Back"></a></p>''')
+               ''')
